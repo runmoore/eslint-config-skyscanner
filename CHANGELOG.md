@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## UNRELEASED
 
+## 9.0.0 - - Upgrading `backpack` dependency
+
+- Upgrading `eslint-plugin-backpack` to `3.0.0` - which now requires `bpk-tokens` as a peer dependency.
+
+## RELEASED
+
 ## 8.0.2 - Upgrading `backpack` dependency
 
 - Upgrading `eslint-plugin-backpack` to `2.0.3`
