@@ -25,18 +25,15 @@
   "scripts": {
     "format:packagejson": "format-package -w",
     "lint": "npm run lint:js",
+    "lint-staged": "lint-staged",
     "lint:js": "eslint . --ext js",
     "lint:js:fix": "eslint . --ext js --fix",
     "postinstall": "node ./main.js",
+    "prepare": "husky install",
     "spellcheck": "mdspell --report --en-gb --ignore-numbers --ignore-acronyms --no-suggestions",
     "spellcheck:ci": "npm run spellcheck -- '**/*.md' '!LICENSE.md' '!**/node_modules/**/*.md'",
     "pretest": "npx ensure-node-env",
     "test": "(cd test && ./e2e-test.sh)"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "!(LICENSE)*.md": [
@@ -49,7 +46,7 @@
     "package.json": "npm run format:packagejson"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
     "@typescript-eslint/parser": "^5.9.0",
     "babel-eslint": "^10.1.0",
     "colors": "^1.4.0",
@@ -71,8 +68,8 @@
   "devDependencies": {
     "format-package": "^6.1.0",
     "husky": "^7.0.4",
-    "jest": "^27.4.5",
-    "lint-staged": "^12.1.4",
+    "jest": "^27.4.7",
+    "lint-staged": "^12.1.7",
     "markdown-spellcheck": "^1.3.1"
   }
 }
